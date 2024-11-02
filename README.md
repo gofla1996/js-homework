@@ -8,6 +8,6 @@
     <details>
     <summary>결과 캡쳐 이미지</summary>
     <div markdown="1">
-    ![mission-0캡쳐이미지](./mission01/assets/mission-0-result.png)
+      <img src="./mission01/assets/mission-0-result.png" alt="첫 번째 과제 결과 캡쳐 이미지">
     </div>
     </details>
