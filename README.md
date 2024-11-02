@@ -8,6 +8,6 @@
     <details>
     <summary>결과 캡쳐 이미지</summary>
     <div markdown="1">
-    ![mission-0캡쳐이미지](https://github.com/user-attachments/assets/74003321-753e-4e4f-ac9d-b4cea176778a)
+    ![mission-0캡쳐이미지](./mission01/assets/mission-0-result.png)
     </div>
     </details>
