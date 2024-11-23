@@ -71,7 +71,7 @@ function setImage(e){
 
  
 { 
-  console.log('4. 변경된 포스터 이미지 주소 : ' + '.' + poster.src.slice(28));
+  console.log('4. 변경된 포스터 이미지 주소 : ' + '.' + poster.src);
   console.log('5. 변경된 포스터 alt : ' + poster.alt);
 }
 }
