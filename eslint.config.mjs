@@ -4,6 +4,23 @@ import pluginJs from "@eslint/js";
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  {languageOptions: { globals: globals.browser }},
+  {
+    
+    languageOptions: { 
+      globals: globals.browser, 
+      gsap: true,
+    }
+  
+  },
+  
   pluginJs.configs.recommended,
+
+  {
+    'no-used-vars': "off",
+  },
+
+  {
+    'gsap': 'true',
+    
+  },
 ];
