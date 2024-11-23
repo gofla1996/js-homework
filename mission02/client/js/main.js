@@ -64,8 +64,9 @@ function setImage(e){
 
   // 비주얼 이미지를 변경한다.
   const poster = document.querySelector('.visual > div > img');
+  const imgFileName = data[index-1].name;
   
-  poster.src = `./assets/${data[index-1].name}.jpeg`;
+  poster.src = `./assets/${imgFileName.toLowerCase()}.jpeg`;
   poster.alt = data[index-1].alt;
 
  
