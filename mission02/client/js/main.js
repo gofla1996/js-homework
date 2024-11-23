@@ -68,14 +68,30 @@ function setImage(e){
   const poster = document.querySelector('.visual > div > img');
   const imgFileName = data[index-1].name.toLowerCase();
   
+  // 새로운 캐릭터가 선택되었을 때만 변경한다.
+  if(poster.src.includes(imgFileName)) return;
   poster.src = `./assets/${imgFileName}.jpeg`;
   poster.alt = data[index-1].alt;
 
+  // 이미지 전환 애니메이션 함수 호출
+  addImageAnimation();
  
 { 
   console.log('4. 변경된 포스터 이미지 주소 : ' + poster.src);
   console.log('5. 변경된 포스터 alt : ' + poster.alt);
 }
+}
+
+// 이미지 전환 애니메이션 함수
+function addImageAnimation() {
+  const poster = document.querySelector('.visual > div > img');
+
+  // GSAP : 이미지가 서서히 사라졌다가 나타나도록
+  gsap.fromTo(
+    poster,
+    { opacity: 0 }, // 시작
+    { opacity: 1, duration: 0.8 } // 종료
+  );
 }
 
 
@@ -98,18 +114,6 @@ function setNameText(e){
   }
 }
 
-// 이미지 전환 애니메이션 함수
-function addImageAnimation() {
-  const poster = document.querySelector('.visual > div > img');
-
-  // GSAP : 이미지가 서서히 사라졌다가 나타나도록
-  gsap.fromTo(
-    poster,
-    { opacity: 0 }, // 시작
-    { opacity: 1, duration: 0.8 } // 종료
-  );
-}
-
 
 
 // 이벤트 리스너 등록
@@ -117,9 +121,7 @@ nav.addEventListener('click', addActiveClass);
 nav.addEventListener('click', setBgColor);
 nav.addEventListener('click', setImage);
 nav.addEventListener('click', setNameText); 
-nav.addEventListener('click', (e) => {
-  addImageAnimation();
-});
+
 
 
 
