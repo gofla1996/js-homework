@@ -15,18 +15,20 @@ const nav = document.querySelector('.nav');
 // is-active 클래스 추가 함수
 function addActiveClass(e){
   // 현재 선택된 캐릭터의 li 요소를 가져온다.
-  const currentNav = e.target.closest('button').parentNode;
-  const navList = document.querySelectorAll('.nav > ul > li');
-
+  const currentNav = e.target.closest('button');
+  
   if(!currentNav) return;
 
+  const currentLi = currentNav.parentNode;
+  
   // 모든 li 요소에서 is-active 클래스를 제거한다.
+  const navList = document.querySelectorAll('.nav > ul > li');
   navList.forEach((nav) => {
     nav.classList.remove('is-active');
   });
 
   // 현재 선택된 li 요소에 is-active 클래스를 추가한다.
-  currentNav.classList.add('is-active');
+  currentLi.classList.add('is-active');
 }
 
 // 배경 색상 변경 함수
